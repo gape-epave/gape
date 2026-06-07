@@ -180,39 +180,6 @@ export default function Home({ setPage }) {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section style={{
-        background: 'var(--teal-light)',
-        borderTop: '1px solid var(--gray-mid)',
-        padding: '48px 2rem',
-        textAlign: 'center',
-      }}>
-        <h2 style={{ fontFamily: 'Google Sans', fontSize: 22, fontWeight: 600, color: 'var(--navy)', marginBottom: 12 }}>
-          Marque uma consulta presencial
-        </h2>
-        <p style={{ color: 'var(--gray-text)', marginBottom: 24, fontSize: 15 }}>
-          A nossa equipa está disponível para o apoiar presencialmente ou à distância.
-        </p>
-        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <button
-            style={{
-              background: 'var(--teal)', color: '#fff', border: 'none',
-              borderRadius: 4, padding: '11px 28px', fontSize: 14, fontWeight: 500,
-            }}
-          >
-            Saiba mais
-          </button>
-          <button
-            style={{
-              background: 'var(--white)', color: 'var(--teal)',
-              border: '1px solid var(--teal)',
-              borderRadius: 4, padding: '11px 28px', fontSize: 14, fontWeight: 500,
-            }}
-          >
-            Chat ao vivo
-          </button>
-        </div>
-      </section>
     </div>
   );
 }
