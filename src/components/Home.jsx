@@ -34,13 +34,13 @@ export default function Home({ setPage }) {
             fontFamily: 'Google Sans', fontSize: 40, fontWeight: 700,
             lineHeight: 1.25, marginBottom: 16,
           }}>
-            Gabinete de Apoio à<br />Proximidade Educativa
+            Gabinete de Apoio à<br />Proximidade Educativa - GAPE
           </h1>
           <p style={{ fontSize: 18, opacity: 0.85, lineHeight: 1.7, marginBottom: 36 }}>
-            O GAPE - Gabinete de Apoio à Proximidade Educativa é um espaço de apoio, escuta e
-acompanhamento destinado a toda a comunidade educativa da EPAVE. Tem como objetivo
-promover o bem-estar escolar, fortalecer relações positivas e contribuir para um ambiente escolar
-mais saudável, inclusivo e colaborativo.
+            O Gabinete de Apoio à Proximidade Educativa é um espaço de apoio, escuta e acompanhamento destinado 
+            a toda a comunidade educativa da EPAVE. 
+            Tem como objetivo promover o bem-estar escolar, fortalecer relações positivas e contribuir para um 
+            ambiente escolar mais saudável, inclusivo e colaborativo.
           </p>
           <button
             onClick={() => setPage('faleconnosco')}
@@ -63,8 +63,8 @@ mais saudável, inclusivo e colaborativo.
       <section style={{ background: 'var(--white)', padding: '56px 2rem', borderTop: '1px solid var(--gray-mid)' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <h2 style={{
-            fontFamily: 'Google Sans', fontSize: 26, fontWeight: 600,
-            color: 'var(--navy)', marginBottom: 24, textAlign: 'center',
+            fontFamily: 'Google Sans', fontSize: 28, fontWeight: 600,
+            color: 'var(--navy)', marginBottom: 24, textAlign: 'justify',
           }}>
             Missão
           </h2>
@@ -75,7 +75,7 @@ mais saudável, inclusivo e colaborativo.
             padding: '28px 32px',
           }}>
             <p style={{
-              fontSize: 15, color: 'var(--gray-text)', lineHeight: 1.8,
+              fontSize: 18, color: 'var(--gray-text)', lineHeight: 1.8,
             }}>
               A missão do GAPE passa por promover o diálogo, a mediação, o bem-estar e as relações
               positivas em contexto escolar, através de espaços de escuta, apoio e acompanhamento à
