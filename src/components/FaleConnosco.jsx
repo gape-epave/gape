@@ -79,9 +79,9 @@ export default function FaleConnosco() {
               Informações de Contacto
             </h2>
             {[
-              ['📍', 'Morada', 'Escola Profissional do Alto Ave - EPAVE\nRua Principal, s/n\n4970-000 Arcos de Valdevez'],
+              ['📍', 'Morada', 'Escola Profissional do Alto Ave - EPAVE\nRua Principal, s/n\n4830-000 Póvoa de Lanhoso'],
               ['📞', 'Telefone', '258 000 000'],
-              ['📧', 'E-mail', 'gape@epave.pt'],
+              ['📧', 'E-mail', 'gape.epave@gmail.com'],
               ['🕐', 'Horário de Atendimento', 'Segunda a Sexta\n09h00 – 12h30 | 13h30 – 17h00'],
             ].map(([icon, label, val]) => (
               <div key={label} style={{ display: 'flex', gap: 14, marginBottom: 24, alignItems: 'flex-start' }}>
