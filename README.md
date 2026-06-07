@@ -1,7 +1,6 @@
 # GAPE — Site React
 
-Versão otimizada em React do site GAPE (Gabinete de Apoio e Proximidade Educacional),
-preservando as cores originais do Google Sites.
+Versão otimizada em React do site GAPE (Gabinete de Apoio e Proximidade Educativa).
 
 ## Cores utilizadas
 
