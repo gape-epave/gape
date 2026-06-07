@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+
+// ── Substitui pelos teus dados do EmailJS ──
+const EMAILJS_SERVICE  = 'service_hkzukf9';
+const EMAILJS_TEMPLATE = 'template_i4x1lyo';
+const EMAILJS_KEY      = '4yWaQ-OPXcYdFU1qr';
 
 const inputStyle = {
   width: '100%',
@@ -24,7 +30,36 @@ const labelStyle = {
 export default function FaleConnosco() {
   const [form, setForm] = useState({ nome: '', email: '', assunto: '', mensagem: '' });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [erro, setErro] = useState('');
+
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
+
+  const enviar = async () => {
+    if (!form.nome || !form.email || !form.mensagem) return;
+    setLoading(true);
+    setErro('');
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE,
+        EMAILJS_TEMPLATE,
+        {
+          from_name:  form.nome,
+          from_email: form.email,
+          assunto:    form.assunto || 'Sem assunto',
+          mensagem:   form.mensagem,
+          to_email:   'gape.epave@gmail.com',
+        },
+        EMAILJS_KEY
+      );
+      setSent(true);
+    } catch (err) {
+      setErro('Erro ao enviar. Tente novamente ou contacte-nos diretamente.');
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   if (sent) {
     return (
@@ -46,7 +81,7 @@ export default function FaleConnosco() {
             onClick={() => { setSent(false); setForm({ nome: '', email: '', assunto: '', mensagem: '' }); }}
             style={{
               background: 'var(--teal)', color: '#fff', border: 'none',
-              borderRadius: 4, padding: '11px 28px', fontSize: 14, fontWeight: 500,
+              borderRadius: 4, padding: '11px 28px', fontSize: 14, fontWeight: 500, cursor: 'pointer',
             }}
           >
             Nova mensagem
@@ -73,7 +108,7 @@ export default function FaleConnosco() {
       <section style={{ maxWidth: 960, margin: '0 auto', padding: '56px 2rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 48 }}>
 
-          {/* Contact info */}
+          {/* Contact info — igual ao original */}
           <div>
             <h2 style={{ fontFamily: 'Google Sans', fontSize: 20, fontWeight: 600, color: 'var(--navy)', marginBottom: 24 }}>
               Informações de Contacto
@@ -89,9 +124,7 @@ export default function FaleConnosco() {
                   width: 40, height: 40, borderRadius: '50%',
                   background: 'var(--teal-light)', flexShrink: 0,
                   display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18,
-                }}>
-                  {icon}
-                </div>
+                }}>{icon}</div>
                 <div>
                   <div style={{ fontSize: 12, color: 'var(--gray-text)', fontWeight: 500, marginBottom: 3, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     {label}
@@ -102,7 +135,6 @@ export default function FaleConnosco() {
                 </div>
               </div>
             ))}
-
             <div style={{
               background: 'var(--teal-light)', borderRadius: 8,
               padding: '16px 18px', marginTop: 8,
@@ -115,7 +147,7 @@ export default function FaleConnosco() {
             </div>
           </div>
 
-          {/* Contact form */}
+          {/* Formulário */}
           <div style={{
             background: 'var(--white)',
             border: '1px solid var(--gray-mid)',
@@ -127,33 +159,24 @@ export default function FaleConnosco() {
               Enviar Mensagem
             </h2>
 
+            {erro && (
+              <div style={{ background: '#fce8e6', color: '#c5221f', borderRadius: 4, padding: '10px 14px', fontSize: 13, marginBottom: 16 }}>
+                {erro}
+              </div>
+            )}
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
               <div>
                 <label style={labelStyle}>Nome completo *</label>
-                <input
-                  style={inputStyle}
-                  value={form.nome}
-                  onChange={e => set('nome', e.target.value)}
-                  placeholder="O seu nome"
-                />
+                <input style={inputStyle} value={form.nome} onChange={e => set('nome', e.target.value)} placeholder="O seu nome" />
               </div>
               <div>
                 <label style={labelStyle}>E-mail *</label>
-                <input
-                  style={inputStyle}
-                  type="email"
-                  value={form.email}
-                  onChange={e => set('email', e.target.value)}
-                  placeholder="email@exemplo.pt"
-                />
+                <input style={inputStyle} type="email" value={form.email} onChange={e => set('email', e.target.value)} placeholder="email@exemplo.pt" />
               </div>
               <div>
                 <label style={labelStyle}>Assunto</label>
-                <select
-                  style={{ ...inputStyle }}
-                  value={form.assunto}
-                  onChange={e => set('assunto', e.target.value)}
-                >
+                <select style={inputStyle} value={form.assunto} onChange={e => set('assunto', e.target.value)}>
                   <option value="">Selecione um assunto</option>
                   <option>Apoio Psicológico</option>
                   <option>Apoio Social</option>
@@ -173,17 +196,18 @@ export default function FaleConnosco() {
                 />
               </div>
               <button
-                onClick={() => { if (form.nome && form.email && form.mensagem) setSent(true); }}
-                disabled={!form.nome || !form.email || !form.mensagem}
+                onClick={enviar}
+                disabled={!form.nome || !form.email || !form.mensagem || loading}
                 style={{
                   background: 'var(--teal)', color: '#fff',
                   border: 'none', borderRadius: 4,
                   padding: '12px', fontSize: 15, fontWeight: 500,
-                  opacity: (!form.nome || !form.email || !form.mensagem) ? 0.45 : 1,
+                  cursor: loading ? 'wait' : 'pointer',
+                  opacity: (!form.nome || !form.email || !form.mensagem || loading) ? 0.45 : 1,
                   transition: 'opacity .15s',
                 }}
               >
-                Enviar Mensagem
+                {loading ? 'A enviar...' : 'Enviar Mensagem'}
               </button>
             </div>
           </div>
