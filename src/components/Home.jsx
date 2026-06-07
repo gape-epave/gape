@@ -165,13 +165,13 @@ export default function Home({ setPage }) {
             }}>
               Sobre o Gabinete
             </h2>
-            <p style={{ fontSize: 15, color: 'var(--gray-text)', lineHeight: 1.8, marginBottom: 16 }}>
+            <p style={{ fontSize: 15, color: 'var(--gray-text)', textAlign: 'justify',lineHeight: 1.8, marginBottom: 16 }}>
               O Gabinete de Apoio à Proximidade Educativa (GAPE) é uma estrutura multidisciplinar
               de apoio à comunidade escolar. Através da sua ação, procura-se identificar,
               sinalizar e intervir nas problemáticas que, de alguma forma, condicionam o acesso
               ao conhecimento em particular e ao desenvolvimento psicossocial em geral.
             </p>
-            <p style={{ fontSize: 15, color: 'var(--gray-text)', lineHeight: 1.8 }}>
+            <p style={{ fontSize: 15, color: 'var(--gray-text)', textAlign: 'justify',lineHeight: 1.8 }}>
               A nossa equipa é composta por profissionais especializados em psicologia,
               educação social e apoio pedagógico, prontos a acompanhar alunos e famílias
               ao longo do seu percurso escolar.
