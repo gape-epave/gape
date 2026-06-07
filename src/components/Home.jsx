@@ -75,7 +75,7 @@ export default function Home({ setPage }) {
             padding: '28px 32px',
           }}>
             <p style={{
-              fontSize: 18, color: 'var(--gray-text)', lineHeight: 1.8, textAlign: 'center',
+              fontSize: 18, color: 'var(--gray-text)', lineHeight: 1.8, textAlign: 'justify',
             }}>
               A missão do GAPE passa por promover o diálogo, a mediação, o bem-estar e as relações
               positivas em contexto escolar, através de espaços de escuta, apoio e acompanhamento à
