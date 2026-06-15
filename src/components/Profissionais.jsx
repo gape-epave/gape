@@ -9,7 +9,7 @@ const TEAM = [
   },
   {
     initials: 'AO',
-    name: 'Ana Oliveira',
+    name: 'Dra. Ana Oliveira',
     role: 'Psicóloga',
     area: 'Psicologia',
     desc: 'Especialista em Psicologia Clínica e Educacional, Orientação Vocacional e Avaliação Psicológica.',
@@ -17,7 +17,7 @@ const TEAM = [
   },
   {
     initials: 'PG',
-    name: 'Patrícia Grandinho',
+    name: 'Dra. Patrícia Grandinho',
     role: 'Psicológa',
     area: 'Psicologia',
     desc: 'Responsável pelo apoio social a alunos e famílias, sinalização e articulação com entidades externas.',
