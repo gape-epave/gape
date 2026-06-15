@@ -18,8 +18,8 @@ const TEAM = [
   {
     initials: 'PG',
     name: 'Dra. Patrícia Grandinho',
-    role: 'Educadora Social',
-    area: 'Educação Social',
+    role: 'Psicóloga',
+    area: 'Psicóloga',
     desc: 'Responsável pelo apoio social a alunos e famílias, sinalização e articulação com entidades externas.',
     color: '#8B3DA9',
   },
