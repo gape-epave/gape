@@ -10,17 +10,17 @@ const TEAM = [
   {
     initials: 'AO',
     name: 'Dra. Ana Oliveira',
-    role: 'Psicóloga',
+    role: 'Psicóloga Escolar',
     area: 'Psicologia',
-    desc: 'Especialista em psicologia clínica e educacional, orientação vocacional e avaliação psicológica.',
+    desc: 'Equipa Técnica do SPO.',
     color: '#9B4DCA',
   },
   {
     initials: 'PG',
     name: 'Dra. Patrícia Grandinho',
-    role: 'Psicóloga',
+    role: 'Psicóloga Escolar',
     area: 'Psicóloga',
-    desc: 'Responsável pelo apoio social a alunos e famílias, sinalização e articulação com entidades externas.',
+    desc: 'Equipa Técnica do SPO.',
     color: '#8B3DA9',
   },
 ];
