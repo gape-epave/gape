@@ -21,7 +21,7 @@ export default function Footer({ setPage }) {
               Gabinete de Apoio à Proximidade Educativa<br />
               Escola Profissional do Alto Ave - EPAVE
             </p>
-            <p style={{ fontSize: 12, marginTop: 10, opacity: 0.6 }}>gape@epave.pt · 258 000 000</p>
+            <p style={{ fontSize: 12, marginTop: 10, opacity: 0.6 }}>gape@epave.pt · 253 634 811</p>
           </div>
 
           {/* Nav */}
