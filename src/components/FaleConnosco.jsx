@@ -6,16 +6,16 @@ const EMAILJS_TEMPLATE = 'template_i4x1lyo';
 const EMAILJS_KEY      = '4yWaQ-OPXcYdFU1qr';
 
 const CATEGORIAS = [
-  { id: 'bullying',  label: 'Bullying ou conflito' },
-  { id: 'pessoal',   label: 'Problema pessoal' },
-  { id: 'familiar',  label: 'Situação familiar' },
-  { id: 'academico', label: 'Assunto académico' },
+  { id: 'bullying',  label: 'Bullying ou Conflito' },
+  { id: 'pessoal',   label: 'Problema Pessoal' },
+  { id: 'familiar',  label: 'Situação Familiar' },
+  { id: 'academico', label: 'Assunto Académico' },
   { id: 'outro',     label: 'Outro' },
 ];
 
 const URGENCIAS = [
-  { id: 'baixa', label: 'Quando puderem' },
-  { id: 'media', label: 'Esta semana' },
+  { id: 'baixa', label: 'Quando Possível' },
+  { id: 'media', label: 'Esta Semana' },
   { id: 'alta',  label: 'Com urgência' },
 ];
 
