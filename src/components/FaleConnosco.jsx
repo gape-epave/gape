@@ -244,7 +244,7 @@ function FormularioAnonimo({ isMobile }) {
         background: '#E8F5E9', border: '1px solid #A5D6A7',
         borderRadius: 8, padding: '12px 14px', fontSize: 13, color: '#1B5E20', lineHeight: 1.5,
       }}>
-        <span style={{ fontSize: 16, flexShrink: 0 }}>🔒</span>
+        <span style={{ fontSize: 18, flexShrink: 0 }}>🔒</span>
         <span>A tua identidade está protegida. Não registamos nome, email, turma nem endereço IP.</span>
       </div>
 
@@ -386,7 +386,7 @@ export default function FaleConnosco() {
             {[
               ['📍', 'Morada', 'Escola Profissional do Alto Ave - EPAVE\nRua Principal, s/n\n4830-000 Póvoa de Lanhoso'],
               ['📞', 'Telefone', '253 634 811'],
-              ['📧', 'E-mail', 'gape@epave/pt'],
+              ['📧', 'E-mail', 'gape@epave.pt'],
               ['🕐', 'Horário de Atendimento', 'Quintas-feiras\n09h00 – 18h00'],
             ].map(([icon, label, val]) => (
               <div key={label} style={{ display: 'flex', gap: 14, marginBottom: 20, alignItems: 'flex-start' }}>
