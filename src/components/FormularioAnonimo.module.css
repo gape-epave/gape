@@ -1,0 +1,378 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #e8e6df;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 560px;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+/* Aviso de anonimato */
+.avisoAnonimato {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #f0faf5;
+  border: 1px solid #c8ead8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #1a6640;
+  margin-bottom: 1.75rem;
+  line-height: 1.5;
+}
+
+.avisoIcone {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Fieldset base */
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.legenda {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c2c2a;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
+/* Grelha de categorias */
+.categoriasGrelha {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.categoriaOpcao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border: 1px solid #e8e6df;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-align: center;
+  user-select: none;
+}
+
+.categoriaOpcao:hover {
+  border-color: #a0c8b8;
+  background: #f8fdfb;
+}
+
+.categoriaAtiva {
+  border-color: #2d7a56;
+  background: #f0faf5;
+}
+
+.categoriaIcone {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.categoriaLabel {
+  font-size: 12px;
+  color: #444441;
+  line-height: 1.3;
+}
+
+.radioOculto {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Campo genérico */
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+.rotulo {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c2c2a;
+  margin-bottom: 6px;
+}
+
+.ajuda {
+  font-size: 12px;
+  color: #888780;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  border: 1px solid #d3d1c7;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #2c2c2a;
+  background: #fdfcfb;
+  resize: vertical;
+  line-height: 1.6;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #2d7a56;
+  box-shadow: 0 0 0 3px rgba(45, 122, 86, 0.1);
+}
+
+.campoInvalido {
+  border-color: #c0392b;
+}
+
+.contadorLinha {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #888780;
+}
+
+/* Urgência */
+.urgenciaOpcoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.urgenciaOpcao {
+  padding: 7px 16px;
+  border: 1px solid #d3d1c7;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #444441;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  user-select: none;
+}
+
+.urgenciaOpcao:hover {
+  border-color: #a0c8b8;
+}
+
+.urgenciaAtiva {
+  border-color: #2d7a56;
+  background: #f0faf5;
+  color: #1a6640;
+}
+
+/* Input de texto */
+.input {
+  width: 100%;
+  border: 1px solid #d3d1c7;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #2c2c2a;
+  background: #fdfcfb;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2d7a56;
+  box-shadow: 0 0 0 3px rgba(45, 122, 86, 0.1);
+}
+
+/* Botões */
+.botaoPrimario {
+  width: 100%;
+  padding: 13px;
+  background: #2d7a56;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.botaoPrimario:hover:not(:disabled) {
+  background: #245f43;
+}
+
+.botaoPrimario:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.botaoPrimario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.botaoSecundario {
+  padding: 10px 20px;
+  background: transparent;
+  color: #2d7a56;
+  border: 1px solid #2d7a56;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.botaoSecundario:hover {
+  background: #f0faf5;
+}
+
+/* Erro */
+.erro {
+  font-size: 12px;
+  color: #c0392b;
+  margin: 4px 0 0;
+}
+
+/* Confirmação */
+.confirmacao {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.confirmacaoIcone {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #f0faf5;
+  color: #2d7a56;
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  border: 2px solid #c8ead8;
+}
+
+.erroIcone {
+  background: #fdf0ee;
+  color: #c0392b;
+  border-color: #f0c4be;
+}
+
+.confirmacaoTitulo {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2c2c2a;
+  margin: 0 0 10px;
+}
+
+.confirmacaoTexto {
+  font-size: 14px;
+  color: #5f5e5a;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+.urgenciaAviso {
+  font-size: 13px;
+  color: #1a6640;
+  background: #f0faf5;
+  border: 1px solid #c8ead8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 1.25rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #1e1e1c;
+    border-color: #3a3835;
+  }
+
+  .avisoAnonimato {
+    background: #0d2e1e;
+    border-color: #1a5c38;
+    color: #6dba94;
+  }
+
+  .legenda,
+  .rotulo,
+  .confirmacaoTitulo {
+    color: #e8e6df;
+  }
+
+  .categoriaOpcao {
+    border-color: #3a3835;
+    background: transparent;
+  }
+
+  .categoriaOpcao:hover {
+    border-color: #2d7a56;
+    background: #0d2e1e;
+  }
+
+  .categoriaAtiva {
+    border-color: #2d7a56;
+    background: #0d2e1e;
+  }
+
+  .categoriaLabel {
+    color: #b4b2a9;
+  }
+
+  .textarea,
+  .input {
+    background: #161614;
+    border-color: #3a3835;
+    color: #e8e6df;
+  }
+
+  .textarea:focus,
+  .input:focus {
+    border-color: #2d7a56;
+  }
+
+  .urgenciaOpcao {
+    border-color: #3a3835;
+    color: #b4b2a9;
+  }
+
+  .urgenciaAtiva {
+    border-color: #2d7a56;
+    background: #0d2e1e;
+    color: #6dba94;
+  }
+
+  .ajuda,
+  .contadorLinha,
+  .confirmacaoTexto {
+    color: #888780;
+  }
+
+  .confirmacaoIcone {
+    background: #0d2e1e;
+    border-color: #1a5c38;
+  }
+
+  .urgenciaAviso {
+    background: #0d2e1e;
+    border-color: #1a5c38;
+    color: #6dba94;
+  }
+}
