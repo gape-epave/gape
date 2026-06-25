@@ -4,17 +4,17 @@ import { useState } from "react";
 import styles from "./FormularioAnonimo.module.css";
 
 const CATEGORIAS = [
-  { id: "bullying", label: "Bullying ou conflito", icone: "⚠️" },
-  { id: "pessoal", label: "Problema pessoal", icone: "💬" },
-  { id: "familiar", label: "Situação familiar", icone: "🏠" },
-  { id: "academico", label: "Assunto académico", icone: "📚" },
+  { id: "bullying", label: "Bullying ou Conflito", icone: "⚠️" },
+  { id: "pessoal", label: "Problema Pessoal", icone: "💬" },
+  { id: "familiar", label: "Situação Familiar", icone: "🏠" },
+  { id: "academico", label: "Assunto Académico", icone: "📚" },
   { id: "outro", label: "Outro", icone: "•••" },
 ];
 
 const URGENCIAS = [
-  { id: "baixa", label: "Quando puderem" },
-  { id: "media", label: "Esta semana" },
-  { id: "alta", label: "Com urgência" },
+  { id: "baixa", label: "Quando Possível" },
+  { id: "media", label: "Esta Semana" },
+  { id: "alta", label: "Com Urgência" },
 ];
 
 export default function FormularioAnonimo() {
