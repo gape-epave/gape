@@ -3,13 +3,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* ── Cores em Roxo e Branco ── */
-  --navy:        #6B2D8C;   /* navbar / hero fundo - roxo escuro */
-  --navy-light:  #8B3DA9;   /* hover navbar - roxo claro */
-  --teal:        #9B4DCA;   /* botões primários, destaques - roxo */
-  --teal-dark:   #7A3B9F;   /* hover botão - roxo escuro */
-  --teal-light:  #F0E6F6;   /* fundos suaves - roxo muito claro */
-  --blue-link:   #8B3DA9;   /* links - roxo */
+  /* ── Cores EPAVE — Azul escuro + Vermelho ── */
+  --navy:        #1A2D5A;   /* navbar / hero fundo - azul escuro EPAVE */
+  --navy-light:  #243870;   /* hover navbar - azul médio */
+  --teal:        #E63329;   /* botões primários, destaques - vermelho EPAVE */
+  --teal-dark:   #C42820;   /* hover botão - vermelho escuro */
+  --teal-light:  #FDECEA;   /* fundos suaves - vermelho muito claro */
+  --blue-link:   #1A2D5A;   /* links - azul EPAVE */
   --white:       #ffffff;
   --off-white:   #F8F9FA;
   --gray-light:  #F1F3F4;
