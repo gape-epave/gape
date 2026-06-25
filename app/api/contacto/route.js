@@ -22,15 +22,15 @@ export async function POST(request) {
 
     // Mapeamento de labels
     const categoriasMap = {
-      bullying: "Bullying ou conflito",
-      pessoal: "Problema pessoal",
-      familiar: "Situação familiar",
-      academico: "Assunto académico",
+      bullying: "Bullying ou Conflito",
+      pessoal: "Problema Pessoal",
+      familiar: "Situação Familiar",
+      academico: "Assunto Académico",
       outro: "Outro",
     };
 
     const urgenciaMap = {
-      baixa: "Quando puderem",
+      baixa: "Quando Possível",
       media: "Esta semana",
       alta: "⚠️ COM URGÊNCIA",
     };
