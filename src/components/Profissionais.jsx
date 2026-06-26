@@ -21,7 +21,7 @@ const TEAM = [
     initials: 'PG',
     name: 'Dra. Patrícia Grandinho',
     role: 'Psicóloga Escolar',
-    area: 'Psicóloga',
+    area: 'Psicologia',
     desc: 'Equipa Técnica do SPO.',
     color: '#5E1F9E',
     photo: '/images/Patricia_Grandinho.jpg',
