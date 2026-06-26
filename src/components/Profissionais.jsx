@@ -21,14 +21,14 @@ const TEAM = [
     initials: 'PG',
     name: 'Dra. Patrícia Grandinho',
     role: 'Psicóloga Escolar',
-    area: 'Psicologia',
+    area: 'Psicóloga',
     desc: 'Equipa Técnica do SPO.',
     color: '#5E1F9E',
     photo: '/images/Patricia_Grandinho.jpg',
   },
 ];
 
-export default function Profissionais() {
+export default function Profissionais({ setPage }) {
   return (
     <div>
       {/* Header */}
@@ -110,7 +110,14 @@ export default function Profissionais() {
         }}>
           <p style={{ fontSize: 14, color: 'var(--gray-text)', lineHeight: 1.6 }}>
             Para marcar uma consulta ou obter mais informações sobre a equipa, utilize
-            a página <strong style={{ color: 'var(--navy)' }}>Fale Connosco</strong> ou dirija-se ao gabinete durante o horário de atendimento.
+            a página{' '}
+            <strong
+              onClick={() => setPage('faleconnosco')}
+              style={{ color: 'var(--navy)', cursor: 'pointer', textDecoration: 'underline' }}
+            >
+              Fale Connosco
+            </strong>
+            {' '}ou dirija-se ao gabinete durante o horário de atendimento.
           </p>
         </div>
       </section>
