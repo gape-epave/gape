@@ -31,7 +31,7 @@ export default function App() {
   const pages = {
     home:          <Home setPage={setPage} />,
     servicos:      <Servicos />,
-    profissionais: <Profissionais />,
+    profissionais: <Profissionais setPage={setPage} />,
     documentacao:  <Documentacao />,
     faleconnosco:  <FaleConnosco />,
     // historico:  <Historico />,
