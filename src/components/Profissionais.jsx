@@ -1,28 +1,28 @@
 const TEAM = [
   {
     initials: 'IA',
-    name: 'Dra. InÍs Almeida',
-    role: 'Respons·vel do GAPE',
-    area: 'CoordenaÁ„o e Gest„o',
-    desc: 'Respons·vel pela coordenaÁ„o geral do gabinete e articulaÁ„o com a direÁ„o pedagÛgica.',
+    name: 'Dra. In√™s Almeida',
+    role: 'Respons√°vel do GAPE',
+    area: 'Coordena√ß√£o e Gest√£o',
+    desc: 'Respons√°vel pela coordena√ß√£o geral do gabinete e articula√ß√£o com a dire√ß√£o pedag√≥gica.',
     color: '#4A1680',
     photo: '/images/Ines_Almeida.jpg',
   },
   {
     initials: 'AO',
     name: 'Dra. Ana Oliveira',
-    role: 'PsicÛloga Escolar',
+    role: 'Psic√≥loga Escolar',
     area: 'Psicologia',
-    desc: 'Equipa TÈcnica do SPO.',
+    desc: 'Equipa T√©cnica do SPO.',
     color: '#7B2FBE',
     photo: '/images/Ana_Oliveira.jpg',
   },
   {
     initials: 'PG',
-    name: 'Dra. PatrÌcia Grandinho',
-    role: 'PsicÛloga Escolar',
-    area: 'PsicÛloga',
-    desc: 'Equipa TÈcnica do SPO.',
+    name: 'Dra. Patr√≠cia Grandinho',
+    role: 'Psic√≥loga Escolar',
+    area: 'Psic√≥loga',
+    desc: 'Equipa T√©cnica do SPO.',
     color: '#5E1F9E',
     photo: '/images/Patricia_Grandinho.jpg',
   },
@@ -38,7 +38,7 @@ export default function Profissionais() {
             A Nossa Equipa
           </h1>
           <p style={{ fontSize: 16, opacity: 0.85, lineHeight: 1.7 }}>
-            Profissionais especializados ao serviÁo da comunidade escolar
+            Profissionais especializados ao servi√ßo da comunidade escolar
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function Profissionais() {
               boxShadow: 'var(--card-shadow)',
               display: 'flex', alignItems: 'center', gap: 28,
             }}>
-              {/* Avatar \u2014 foto ou iniciais */}
+              {/* Avatar */}
               <div style={{
                 width: 110, height: 110, borderRadius: '50%', flexShrink: 0,
                 background: p.photo ? 'transparent' : p.color,
@@ -109,13 +109,10 @@ export default function Profissionais() {
           borderLeft: '4px solid var(--teal)',
         }}>
           <p style={{ fontSize: 14, color: 'var(--gray-text)', lineHeight: 1.6 }}>
-            Para marcar uma consulta ou obter mais informaÁıes sobre a equipa, utilize
-            a p·gina <strong style={{ color: 'var(--navy)' }}>Fale Connosco</strong> ou dirija-se ao gabinete durante o hor·rio de atendimento.
+            Para marcar uma consulta ou obter mais informa√ß√µes sobre a equipa, utilize
+            a p√°gina <strong style={{ color: 'var(--navy)' }}>Fale Connosco</strong> ou dirija-se ao gabinete durante o hor√°rio de atendimento.
           </p>
         </div>
-
-        {/* Para adicionar/atualizar fotos: colocar o ficheiro em public/images/ e
-            definir o campo photo no array TEAM acima. Ex: photo: '/images/Ines_Almeida.jpg' */}
       </section>
     </div>
   );
