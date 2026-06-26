@@ -5,7 +5,8 @@ const TEAM = [
     role: 'Responsável do GAPE',
     area: 'Coordenação e Gestão',
     desc: 'Responsável pela coordenação geral do gabinete e articulação com a direção pedagógica.',
-    color: '#6B2D8C',
+    color: '#4A1680',
+    photo: null,
   },
   {
     initials: 'AO',
@@ -13,7 +14,8 @@ const TEAM = [
     role: 'Psicóloga Escolar',
     area: 'Psicologia',
     desc: 'Equipa Técnica do SPO.',
-    color: '#9B4DCA',
+    color: '#7B2FBE',
+    photo: '/images/Ana_Oliveira.jpg',
   },
   {
     initials: 'PG',
@@ -21,7 +23,8 @@ const TEAM = [
     role: 'Psicóloga Escolar',
     area: 'Psicóloga',
     desc: 'Equipa Técnica do SPO.',
-    color: '#8B3DA9',
+    color: '#5E1F9E',
+    photo: null,
   },
 ];
 
@@ -52,15 +55,24 @@ export default function Profissionais() {
               boxShadow: 'var(--card-shadow)',
               display: 'flex', alignItems: 'center', gap: 28,
             }}>
-              {/* Avatar */}
+              {/* Avatar — foto ou iniciais */}
               <div style={{
                 width: 72, height: 72, borderRadius: '50%', flexShrink: 0,
-                background: p.color,
+                background: p.photo ? 'transparent' : p.color,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'Google Sans', fontWeight: 700, fontSize: 22, color: '#fff',
                 letterSpacing: 1,
+                overflow: 'hidden',
               }}>
-                {p.initials}
+                {p.photo ? (
+                  <img
+                    src={p.photo}
+                    alt={p.name}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+                  />
+                ) : (
+                  p.initials
+                )}
               </div>
 
               {/* Info */}
@@ -97,6 +109,10 @@ export default function Profissionais() {
             a página <strong style={{ color: 'var(--navy)' }}>Fale Connosco</strong> ou dirija-se ao gabinete durante o horário de atendimento.
           </p>
         </div>
+
+        {/* Nota para gestores */}
+        {/* Para adicionar/atualizar fotos: colocar o ficheiro em public/images/ com o nome
+            exato indicado no campo "photo" do array TEAM acima. Ex: public/images/Ines_Almeida.jpg */}
       </section>
     </div>
   );
