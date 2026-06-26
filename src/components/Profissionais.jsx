@@ -24,7 +24,7 @@ const TEAM = [
     area: 'Psicóloga',
     desc: 'Equipa Técnica do SPO.',
     color: '#5E1F9E',
-    photo: null,
+    photo: '/images/Patricia_Grandinho.jpg',
   },
 ];
 
@@ -57,18 +57,22 @@ export default function Profissionais() {
             }}>
               {/* Avatar — foto ou iniciais */}
               <div style={{
-                width: 72, height: 72, borderRadius: '50%', flexShrink: 0,
+                width: 110, height: 110, borderRadius: '50%', flexShrink: 0,
                 background: p.photo ? 'transparent' : p.color,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'Google Sans', fontWeight: 700, fontSize: 22, color: '#fff',
+                fontFamily: 'Google Sans', fontWeight: 700, fontSize: 28, color: '#fff',
                 letterSpacing: 1,
                 overflow: 'hidden',
+                border: p.photo ? '3px solid var(--teal-light)' : 'none',
               }}>
                 {p.photo ? (
                   <img
                     src={p.photo}
                     alt={p.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+                    style={{
+                      width: '100%', height: '100%',
+                      objectFit: 'cover', objectPosition: 'center top',
+                    }}
                   />
                 ) : (
                   p.initials
@@ -110,9 +114,8 @@ export default function Profissionais() {
           </p>
         </div>
 
-        {/* Nota para gestores */}
-        {/* Para adicionar/atualizar fotos: colocar o ficheiro em public/images/ com o nome
-            exato indicado no campo "photo" do array TEAM acima. Ex: public/images/Ines_Almeida.jpg */}
+        {/* Para adicionar/atualizar fotos: colocar o ficheiro em public/images/ e
+            definir o campo photo no array TEAM acima. Ex: photo: '/images/Ines_Almeida.jpg' */}
       </section>
     </div>
   );
