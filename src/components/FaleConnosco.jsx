@@ -183,6 +183,7 @@ function FormularioAnonimo({ isMobile }) {
           from_email: contacto || 'anonimo@gape',
           assunto:    `[ANÓNIMO] ${categoriasMap[categoria]} — ${urgenciaMap[urgencia]}`,
           mensagem:   mensagem,
+          message:    mensagem,
           to_email:   'gape.epave@gmail.com',
         },
         EMAILJS_KEY
