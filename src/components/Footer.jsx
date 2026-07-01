@@ -45,8 +45,21 @@ export default function Footer({ setPage }) {
             <div style={{ fontFamily: 'Google Sans', fontWeight: 600, fontSize: 13, color: '#fff', marginBottom: 14, textTransform: 'uppercase', letterSpacing: '0.07em' }}>
               Informação
             </div>
-            {['Política de Privacidade', 'RGPD', 'Acessibilidade'].map(item => (
-              <div key={item} style={{ fontSize: 13, marginBottom: 8, cursor: 'pointer', opacity: 0.8 }}>{item}</div>
+            {[
+              { label: 'Política de Privacidade', href: 'https://epave.pt/politica-de-privacidade/' },
+              { label: 'RGPD',                     href: 'https://epave.pt/politica-de-privacidade/' },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'block', fontSize: 13, marginBottom: 8, opacity: 0.8, color: 'rgba(255,255,255,0.75)', textDecoration: 'none' }}
+                onMouseEnter={e => e.target.style.opacity = 1}
+                onMouseLeave={e => e.target.style.opacity = 0.8}
+              >
+                {label}
+              </a>
             ))}
           </div>
         </div>
