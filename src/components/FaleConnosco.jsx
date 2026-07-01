@@ -385,7 +385,7 @@ export default function FaleConnosco() {
             </h2>
 
             {[
-              ['📍', 'Morada', 'Escola Profissional do Alto Ave - EPAVE\nRua Principal, s/n\n4830-000 Póvoa de Lanhoso'],
+              ['📍', 'Morada', 'Escola Profissional do Alto Ave - EPAVE\n Av. Bombeiros Voluntários nº238\n4830-514 Póvoa de Lanhoso'],
               ['📞', 'Telefone', '253 634 811'],
               ['📧', 'E-mail', 'gape@epave.pt'],
               ['🕐', 'Horário de Atendimento', 'Quintas-feiras\n09h00 – 18h00'],
