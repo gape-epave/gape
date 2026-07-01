@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Não indexar assets internos
+Disallow: /images/
+
+Sitemap: https://gape-beryl.vercel.app/sitemap.xml
