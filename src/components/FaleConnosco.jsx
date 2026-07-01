@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
-const EMAILJS_SERVICE  = 'service_hkzukf9';
-const EMAILJS_TEMPLATE = 'template_i4x1lyo';
-const EMAILJS_KEY      = '4yWaQ-OPXcYdFU1qr';
+const EMAILJS_SERVICE  = import.meta.env.VITE_EMAILJS_SERVICE  || 'service_hkzukf9';
+const EMAILJS_TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE || 'template_i4x1lyo';
+const EMAILJS_KEY      = import.meta.env.VITE_EMAILJS_KEY      || '4yWaQ-OPXcYdFU1qr';
 
 const CATEGORIAS = [
   { id: 'bullying',  label: 'Bullying ou Conflito' },
