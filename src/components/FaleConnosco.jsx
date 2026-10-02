@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 const EMAILJS_SERVICE  = import.meta.env.VITE_EMAILJS_SERVICE  || 'service_hkzukf9';
@@ -350,6 +350,12 @@ function FormularioAnonimo({ isMobile }) {
 export default function FaleConnosco() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [modo, setModo]         = useState('normal'); // normal | anonimo
+  const formRef = useRef(null);
+
+  const abrirAnonimo = () => {
+    setModo('anonimo');
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768);
@@ -368,6 +374,25 @@ export default function FaleConnosco() {
           <p style={{ fontSize: isMobile ? 14 : 16, opacity: 0.85, lineHeight: 1.7 }}>
             Estamos disponíveis para responder a todas as suas questões
           </p>
+          <div style={{
+            marginTop: 26, display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 10,
+            background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)',
+            borderRadius: 12, padding: isMobile ? '16px 18px' : '18px 28px',
+          }}>
+            <p style={{ fontSize: isMobile ? 14 : 15, margin: 0, lineHeight: 1.5 }}>
+              Precisas de falar sem te identificares?
+            </p>
+            <button
+              onClick={abrirAnonimo}
+              style={{
+                background: '#fff', color: 'var(--navy)', border: 'none', borderRadius: 24,
+                padding: '12px 26px', fontSize: 15, fontWeight: 700, cursor: 'pointer',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.2)', minHeight: 44,
+              }}
+            >
+              🔒 Falar anonimamente
+            </button>
+          </div>
         </div>
       </div>
 
@@ -429,7 +454,8 @@ export default function FaleConnosco() {
           </div>
 
           {/* ── Coluna direita: formulário com tabs ── */}
-          <div style={{
+          <div ref={formRef} style={{
+            scrollMarginTop: 80,
             background: '#fff',
             border: '1px solid #DADCE0',
             borderRadius: 8,
@@ -446,7 +472,15 @@ export default function FaleConnosco() {
                 <button
                   key={tab.key}
                   onClick={() => setModo(tab.key)}
-                  style={{
+                  style={tab.key === 'anonimo' ? {
+                    flex: 1, padding: '14px 8px',
+                    fontSize: isMobile ? 13 : 14, fontWeight: 700,
+                    color: modo === 'anonimo' ? '#fff' : 'var(--navy)',
+                    background: modo === 'anonimo' ? 'var(--teal)' : 'var(--teal-light)',
+                    border: 'none', cursor: 'pointer',
+                    borderBottom: '2px solid var(--teal)',
+                    transition: 'all .15s',
+                  } : {
                     flex: 1, padding: '14px 8px',
                     fontSize: isMobile ? 12 : 13, fontWeight: modo === tab.key ? 600 : 400,
                     color: modo === tab.key ? 'var(--teal)' : '#5F6368',
