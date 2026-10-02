@@ -390,7 +390,7 @@ export default function FaleConnosco() {
                 boxShadow: '0 2px 8px rgba(0,0,0,0.2)', minHeight: 44,
               }}
             >
-              🔒 Falar anonimamente
+              🔒 Falar Anonimamente
             </button>
           </div>
         </div>
@@ -467,7 +467,7 @@ export default function FaleConnosco() {
             <div style={{ display: 'flex', borderBottom: '1px solid #DADCE0' }}>
               {[
                 { key: 'normal',   label: '✉️  Enviar mensagem' },
-                { key: 'anonimo',  label: '🔒  Falar anonimamente' },
+                { key: 'anonimo',  label: '🔒  Falar Anonimamente' },
               ].map(tab => (
                 <button
                   key={tab.key}
