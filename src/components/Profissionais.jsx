@@ -1,7 +1,7 @@
 const TEAM = [
   {
     initials: 'IA',
-    name: 'Dra. Inês Almeida',
+    name: 'Dra Inês Almeida',
     role: 'Responsável do GAPE',
     area: 'Coordenação e Gestão',
     desc: 'Responsável pela coordenação geral do gabinete e articulação com a direção pedagógica.',
