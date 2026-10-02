@@ -7,6 +7,7 @@ const TEAM = [
     desc: 'Responsável pela coordenação geral do gabinete e articulação com a direção pedagógica.',
     color: '#4A1680',
     photo: '/images/Ines_Almeida.jpg',
+    visible: true,
   },
   {
     initials: 'AO',
@@ -16,6 +17,7 @@ const TEAM = [
     desc: 'Equipa Técnica do SPO.',
     color: '#7B2FBE',
     photo: '/images/Ana_Oliveira.jpg',
+    visible: false, // oculta — mudar para true para voltar a mostrar
   },
   {
     initials: 'PG',
@@ -25,6 +27,7 @@ const TEAM = [
     desc: 'Equipa Técnica do SPO.',
     color: '#5E1F9E',
     photo: '/images/Patricia_Grandinho.jpg',
+    visible: false, // oculta — mudar para true para voltar a mostrar
   },
 ];
 
@@ -46,7 +49,7 @@ export default function Profissionais({ setPage }) {
       {/* Team cards */}
       <section style={{ maxWidth: 960, margin: '0 auto', padding: '56px 2rem' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          {TEAM.map((p, i) => (
+          {TEAM.filter((p) => p.visible !== false).map((p, i) => (
             <div key={i} style={{
               background: 'var(--white)',
               border: '1px solid var(--gray-mid)',
