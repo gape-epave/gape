@@ -41,29 +41,36 @@ export default function Navbar({ page, setPage }) {
           height: 64,
         }}>
 
-          {/* Logo / Brand */}
-          <button
-            onClick={() => handleNav('home')}
-            aria-label="GAPE — EPAVE, página inicial"
-            style={{
-              background: 'none', border: 'none', cursor: 'pointer',
-              display: 'flex', alignItems: 'center', gap: 12,
-              flexShrink: 0, padding: 0,
-            }}
-          >
-            <img
-              src="/images/epave-logo-branco.png"
-              alt="EPAVE"
-              style={{ height: isMobile ? 26 : 32, width: 'auto', display: 'block' }}
-            />
+          {/* Logo EPAVE (abre epave.pt) + marca GAPE (página inicial) */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
+            <a
+              href="https://epave.pt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir o site da EPAVE (novo separador)"
+              title="Ir para epave.pt"
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <img
+                src="/images/epave-logo-branco.png"
+                alt="EPAVE"
+                style={{ height: isMobile ? 26 : 32, width: 'auto', display: 'block' }}
+              />
+            </a>
             <span aria-hidden="true" style={{ width: 1, height: 28, background: 'rgba(255,255,255,0.35)' }} />
-            <span style={{
-              fontFamily: 'Google Sans', fontWeight: 700,
-              fontSize: 20, color: '#fff', letterSpacing: 0.5,
-            }}>
-              GAPE
-            </span>
-          </button>
+            <button
+              onClick={() => handleNav('home')}
+              aria-label="GAPE, página inicial"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            >
+              <span style={{
+                fontFamily: 'Google Sans', fontWeight: 700,
+                fontSize: 20, color: '#fff', letterSpacing: 0.5,
+              }}>
+                GAPE
+              </span>
+            </button>
+          </div>
 
           {/* Links desktop */}
           {!isMobile && (

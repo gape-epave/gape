@@ -9,7 +9,9 @@ export default function Footer({ setPage }) {
           {/* Brand */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-              <img src="/images/epave-logo-branco.png" alt="EPAVE" style={{ height: 30, width: 'auto', display: 'block' }} />
+              <a href="https://epave.pt/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o site da EPAVE (novo separador)" title="Ir para epave.pt" style={{ display: 'flex' }}>
+                <img src="/images/epave-logo-branco.png" alt="EPAVE" style={{ height: 30, width: 'auto', display: 'block' }} />
+              </a>
               <span aria-hidden="true" style={{ width: 1, height: 26, background: 'rgba(255,255,255,0.35)' }} />
               <span style={{ fontFamily: 'Google Sans', fontWeight: 700, fontSize: 18, color: '#fff' }}>GAPE</span>
             </div>
