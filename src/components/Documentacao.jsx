@@ -1,7 +1,7 @@
 const DOCS = [
   {
     category: 'Formulários',
-    color: '#6B2D8C',
+    color: '#5D1BB3',
     icon: '📋',
     items: [
       { name: 'Pedido de Apoio Psicológico', type: 'PDF', desc: 'Formulário para solicitar acompanhamento psicológico individual.', url: '/docs/formularios/pedido-apoio-psicologico.pdf' },
@@ -21,7 +21,7 @@ const DOCS = [
   },
   {
     category: 'Material de Apoio',
-    color: '#6B2D8C',
+    color: '#5D1BB3',
     icon: '📚',
     items: [
       { name: 'Guia de Estudo Eficaz', type: 'PDF', desc: 'Técnicas e estratégias para melhorar o rendimento académico.', url: '/docs/apoio/guia-estudo-eficaz.pdf' },

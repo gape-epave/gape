@@ -261,7 +261,7 @@ function FormularioAnonimo({ isMobile }) {
                 padding: '7px 14px', borderRadius: 20, fontSize: 13, cursor: 'pointer',
                 border: `1px solid ${categoria === cat.id ? 'var(--teal)' : '#DADCE0'}`,
                 background: categoria === cat.id ? 'var(--teal-light)' : '#fff',
-                color: categoria === cat.id ? '#00695C' : '#5F6368',
+                color: categoria === cat.id ? 'var(--teal-dark)' : '#5F6368',
                 fontWeight: categoria === cat.id ? 500 : 400,
                 transition: 'all .15s',
               }}
@@ -303,7 +303,7 @@ function FormularioAnonimo({ isMobile }) {
                 padding: '7px 16px', borderRadius: 20, fontSize: 13, cursor: 'pointer',
                 border: `1px solid ${urgencia === u.id ? 'var(--teal)' : '#DADCE0'}`,
                 background: urgencia === u.id ? 'var(--teal-light)' : '#fff',
-                color: urgencia === u.id ? '#00695C' : '#5F6368',
+                color: urgencia === u.id ? 'var(--teal-dark)' : '#5F6368',
                 fontWeight: urgencia === u.id ? 500 : 400,
                 transition: 'all .15s',
               }}

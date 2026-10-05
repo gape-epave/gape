@@ -5,7 +5,7 @@ const TEAM = [
     role: 'Responsável do GAPE',
     area: 'Coordenação e Gestão',
     desc: 'Responsável pela coordenação geral do gabinete e articulação com a direção pedagógica.',
-    color: '#4A1680',
+    color: '#5D1BB3',
     photo: '/images/Ines_Almeida.jpg',
     visible: true,
   },
@@ -15,7 +15,7 @@ const TEAM = [
     role: 'Psicóloga Escolar',
     area: 'Psicologia',
     desc: 'Equipa Técnica do SPO.',
-    color: '#7B2FBE',
+    color: '#6852ED',
     photo: '/images/Ana_Oliveira.jpg',
     visible: false, // oculta — mudar para true para voltar a mostrar
   },
@@ -25,7 +25,7 @@ const TEAM = [
     role: 'Psicóloga Escolar',
     area: 'Psicologia',
     desc: 'Equipa Técnica do SPO.',
-    color: '#5E1F9E',
+    color: '#543BEB',
     photo: '/images/Patricia_Grandinho.jpg',
     visible: false, // oculta — mudar para true para voltar a mostrar
   },

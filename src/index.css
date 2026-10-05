@@ -3,13 +3,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* ── Cores GAPE — Roxo vivo estilo Puplaza ── */
-  --navy:        #4A1680;   /* navbar / hero fundo - roxo escuro profundo */
-  --navy-light:  #5E1F9E;   /* hover navbar - roxo médio */
-  --teal:        #7B2FBE;   /* botões primários, destaques - roxo vivo */
-  --teal-dark:   #6222A0;   /* hover botão - roxo escuro */
-  --teal-light:  #F0E8FA;   /* fundos suaves - roxo muito claro */
-  --blue-link:   #7B2FBE;   /* links - roxo vivo */
+  /* ── Cores GAPE — alinhadas com a paleta de epave.pt ── */
+  --navy:        #5D1BB3;   /* navbar / hero / rodapé - roxo EPAVE (títulos) */
+  --navy-light:  #6852ED;   /* hover navbar - roxo principal EPAVE */
+  --teal:        #6852ED;   /* botões primários, destaques - roxo principal EPAVE */
+  --teal-dark:   #543BEB;   /* hover botão - EPAVE */
+  --teal-light:  #F0EEFD;   /* fundos suaves - lilás claro derivado de #6852ED */
+  --blue-link:   #6852ED;   /* links */
+  --accent:      #EF7171;   /* coral EPAVE - só para pequenos detalhes, nunca texto branco por cima */
   --white:       #ffffff;
   --off-white:   #F8F9FA;
   --gray-light:  #F1F3F4;
@@ -33,3 +34,7 @@ button { font-family: 'Roboto', sans-serif; cursor: pointer; }
 input, textarea { font-family: 'Roboto', sans-serif; }
 a { color: var(--blue-link); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+/* Rodapé: 3 colunas no computador, 1 coluna no telemóvel */
+.footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+@media (max-width: 767px) { .footer-grid { grid-template-columns: 1fr; gap: 28px !important; } }

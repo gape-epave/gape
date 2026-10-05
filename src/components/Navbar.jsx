@@ -44,22 +44,19 @@ export default function Navbar({ page, setPage }) {
           {/* Logo / Brand */}
           <button
             onClick={() => handleNav('home')}
+            aria-label="GAPE — EPAVE, página inicial"
             style={{
               background: 'none', border: 'none', cursor: 'pointer',
-              display: 'flex', alignItems: 'center', gap: 10,
+              display: 'flex', alignItems: 'center', gap: 12,
               flexShrink: 0, padding: 0,
             }}
           >
-            <div style={{
-              width: 38, height: 38,
-              background: 'var(--teal)',
-              borderRadius: '50%',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontFamily: 'Google Sans', fontWeight: 700, fontSize: 16, color: '#fff',
-              letterSpacing: '-0.5px',
-            }}>
-              G
-            </div>
+            <img
+              src="/images/epave-logo-branco.png"
+              alt="EPAVE"
+              style={{ height: isMobile ? 26 : 32, width: 'auto', display: 'block' }}
+            />
+            <span aria-hidden="true" style={{ width: 1, height: 28, background: 'rgba(255,255,255,0.35)' }} />
             <span style={{
               fontFamily: 'Google Sans', fontWeight: 700,
               fontSize: 20, color: '#fff', letterSpacing: 0.5,

@@ -4,17 +4,13 @@ export default function Footer({ setPage }) {
   return (
     <footer style={{ background: 'var(--navy)', color: 'rgba(255,255,255,0.75)', padding: '40px 2rem 24px', marginTop: 'auto' }}>
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 40, marginBottom: 36 }}>
+        <div className="footer-grid" style={{ display: 'grid', gap: 40, marginBottom: 36 }}>
 
           {/* Brand */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
-              <div style={{
-                width: 36, height: 36, borderRadius: '50%',
-                background: 'var(--teal)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'Google Sans', fontWeight: 700, fontSize: 15, color: '#fff',
-              }}>G</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
+              <img src="/images/epave-logo-branco.png" alt="EPAVE" style={{ height: 30, width: 'auto', display: 'block' }} />
+              <span aria-hidden="true" style={{ width: 1, height: 26, background: 'rgba(255,255,255,0.35)' }} />
               <span style={{ fontFamily: 'Google Sans', fontWeight: 700, fontSize: 18, color: '#fff' }}>GAPE</span>
             </div>
             <p style={{ fontSize: 13, lineHeight: 1.7, maxWidth: 280 }}>
